@@ -13,4 +13,4 @@
 - jpeg
 - gif
   
-main.jsない、contentTypesに、`<拡張子>: <MIME タイプ>`という形式で書くと、追加することができます。
+main.js内、contentTypesに、`<拡張子>: <MIME タイプ>`という形式で書くと、追加することができます。
