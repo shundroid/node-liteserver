@@ -1,5 +1,4 @@
-var ip = "127.0.0.1";
-var port = 10000;
+var port = 8080;
 
 var contentTypes = {
   "html": "text/html",
@@ -13,7 +12,6 @@ var contentTypes = {
 }
 var http = require("http");
 var fs = require("fs");
-console.log("server running...");
 http.createServer(function(req, res) {
   var url = req.url === "/" ? "/index.html" : req.url;
   res.writeHead(200, { "Content-Type": contentTypes[url.split(".")[1]]});
@@ -21,4 +19,6 @@ http.createServer(function(req, res) {
     res.write(data);
     res.end();
   });
-}).listen(port, ip);
+}).listen(port, function() {
+  console.log("server running...");
+});
